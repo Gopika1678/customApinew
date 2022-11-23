@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>customApi</title>
+  </head>
+  <body>
+    <h1 class="title">{{title}}</h1>
+    <div class="container">
+
+     <!--Table for list of names and fruits-->
+  
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Favourite Fruit</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of fruitsData">
+      
+            
+           <td>{{item.name}}</td>
+            <td>{{item.FruitFav}}</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+      
+      <!--Button for submitting-->
+      
+      <button type="button" (click)="submitbtn()">Submit</button>
+    </div>
+  </body>
+  <router-outlet></router-outlet>
+  
+</html>
